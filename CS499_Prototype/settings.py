@@ -55,7 +55,7 @@ ROOT_URLCONF = 'CS499_Prototype.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["CS499_Prototype/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
