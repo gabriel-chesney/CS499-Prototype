@@ -8,7 +8,7 @@
     <meta name="viewport" content ="width=device-width, initial-scale=1">
 </head>
 <div class ="container">
-    <table class="table">
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th>Room</th>
@@ -18,9 +18,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr></tr>
-
-
+            {% for Event in events %}
+            <tr>
+                <td>{{Event.room}}</td>
+                <td>{{Event.timeStart}} - {{Event.timeEnd}}</td>
+                <td>{{Event.group}}</td>
+                <td>{{Event.name}}</td>
+            </tr>
+            {%endfor%}
         </tbody>
     </table>
 </div>
