@@ -1,0 +1,24 @@
+.table-striped
+{
+    /*Set Odd-Row background*/
+    background-color: #0065BD;
+    color:#fff;
+    border-color:#000;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, tr.found
+{
+    /*Set Even-Row background*/
+    background-color:#0039A6;
+}
+
+.table-striped>tbody>tr>td
+{
+    border-color:#000;
+}
+
+.table .display-head>tr>th
+{
+    background-color: #FECB00;
+    border-color:#000;
+}
