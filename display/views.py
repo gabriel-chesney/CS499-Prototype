@@ -5,7 +5,9 @@ from datetime import date
 # Create your views here.
 def display(request):
     rooms = Room.objects.all()
-    events = Event.objects.filter(date=date.today()).values('room').distinct().order_by('room', 'timeStart')
+    #events = Event.objects.raw('SELECT * FROM display_event WHERE room IN (SELECT max(room) FROM display_event GROUP BY name)')
+    #events = Event.objects.all().order_by().values("room").distinct()
+    events = Event.objects.all()
     context = {
         "rooms" : rooms,
         "events" : events,
