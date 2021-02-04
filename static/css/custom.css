@@ -1,9 +1,17 @@
+@font-face
+{
+    font-family: 'MSU Font';
+    src: url('Univers_57_Condensed.ttf');
+}
+
+
 .table-striped
 {
     /*Set Odd-Row background*/
     background-color: #0065BD;
     color:#fff;
     border-color:#000;
+    font-size:1.5vw;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td, tr.found
@@ -25,5 +33,24 @@
 
 .header
 {
-    font-size: 10vw;
+    font-size: 6vw;
+    color:#fff
+}
+
+.subheader
+{
+    font-size: 2vw;
+    color:#fff;
+    text-align: center;
+}
+
+.container
+{
+    width:100%;
+}
+
+.page
+{
+    background-color:#0065BD;
+    font-family:'MSU Font', sans-serif;
 }

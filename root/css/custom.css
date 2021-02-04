@@ -1,3 +1,10 @@
+@font-face
+{
+    font-family: 'MSU Font';
+    src: url('/boot/fonts/Univers_57_Condensed.ttf');
+}
+
+
 .table-striped
 {
     /*Set Odd-Row background*/
@@ -25,5 +32,24 @@
 
 .header
 {
-    font-size: 10vw;
+    font-size: 5vw;
+    color:#fff
+}
+
+.subheader
+{
+    font-size: 2vw;
+    color:#fff;
+    text-align: center;
+}
+
+.container
+{
+    width:100%;
+}
+
+.page
+{
+    background-color:#0065BD;
+    /*font-family:'MSU Font', sans-serif;*/
 }
