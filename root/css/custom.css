@@ -1,7 +1,7 @@
 @font-face
 {
     font-family: 'MSU Font';
-    src: url('/boot/fonts/Univers_57_Condensed.ttf');
+    src: url('Univers_57_Condensed.ttf');
 }
 
 
@@ -11,6 +11,7 @@
     background-color: #0065BD;
     color:#fff;
     border-color:#000;
+    font-size:1.5vw;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td, tr.found
@@ -32,7 +33,7 @@
 
 .header
 {
-    font-size: 5vw;
+    font-size: 6vw;
     color:#fff
 }
 
@@ -51,5 +52,5 @@
 .page
 {
     background-color:#0065BD;
-    /*font-family:'MSU Font', sans-serif;*/
+    font-family:'MSU Font', sans-serif;
 }

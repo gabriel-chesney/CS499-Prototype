@@ -39,8 +39,9 @@
 
 .subheader
 {
+    padding-top:2%;
     font-size: 2vw;
-    color:#fff;
+    color:rgb(255, 255, 255);
     text-align: center;
 }
 
