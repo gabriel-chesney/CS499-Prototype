@@ -17,6 +17,7 @@
 .table-striped>tbody>tr:nth-child(odd)>td, tr.found
 {
     /*Set Even-Row background*/
+    color:#fff;
     background-color:#0039A6;
 }
 
