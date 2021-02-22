@@ -46,9 +46,10 @@
     text-align: center;
 }
 
-.container
+.container-fluid
 {
-    width:100%;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .page

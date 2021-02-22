@@ -234,10 +234,10 @@ th {
 
 thead th,
 tfoot td {
-    color: #fff;
+    color: #666;
     padding: 5px 10px;
     font-size: 11px;
-    background: #0039A6;
+    background: #fff;
     border: none;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
