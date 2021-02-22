@@ -17,6 +17,7 @@
 .table-striped>tbody>tr:nth-child(odd)>td, tr.found
 {
     /*Set Even-Row background*/
+    color:#fff;
     background-color:#0039A6;
 }
 
@@ -39,8 +40,9 @@
 
 .subheader
 {
+    padding-top:2%;
     font-size: 2vw;
-    color:#fff;
+    color:rgb(255, 255, 255);
     text-align: center;
 }
 

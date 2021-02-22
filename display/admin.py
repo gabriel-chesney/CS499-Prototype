@@ -12,3 +12,5 @@ class EventAdmin(admin.ModelAdmin):
 admin.site.register(Room, RoomAdmin)
 admin.site.register(Event, EventAdmin)
 admin.site.site_header = "Morehead State University SCES Digital Signage & Room Management"
+admin.site.site_title = "SCES Administration"
+admin.site.index_title = "SCES Administration"
