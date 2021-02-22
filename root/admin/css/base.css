@@ -497,7 +497,7 @@ input[type=button][disabled].default {
     font-weight: 400;
     font-size: 13px;
     text-align: left;
-    background: #79aec8;
+    background: #0065BD;
     color: #fff;
 }
 
@@ -608,11 +608,11 @@ td ul.errorlist + input, td ul.errorlist + select, td ul.errorlist + textarea {
 /* BREADCRUMBS */
 
 div.breadcrumbs {
-    background: #79aec8;
+    background: #0065BD;
     padding: 10px 40px;
     border: none;
     font-size: 14px;
-    color: #c4dce8;
+    color: #fff;
     text-align: left;
 }
 
@@ -813,8 +813,8 @@ table#change-history tbody th {
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    background: #417690;
-    color: #ffc;
+    background: #0039A6;
+    color: #fff;
     overflow: hidden;
 }
 
@@ -839,7 +839,7 @@ table#change-history tbody th {
 }
 
 #branding h1, #branding h1 a:link, #branding h1 a:visited {
-    color: #f5dd5d;
+    color: #fff;
 }
 
 #branding h2 {
