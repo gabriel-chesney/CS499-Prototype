@@ -7,10 +7,8 @@ from django.db.models import Count, Min, Subquery, Max
 def display(request):
     rooms = Room.objects.all()
     
-    events = Event.objects.filter(date=date.today()).filter(timeEnd__gte=datetime.now()).group_by().order_by('timeStart', 'room')
+    events = Event.objects.filter(date=date.today()).order_by('room').order_by('timeStart')
 
-    #events_distinct = Event.objects.filter(date=date.today()).order_by('-timeStart').values('room').distinct().annotate(occurrences=Count('room'), pk=Max('pk'))
-    #events = Event.objects.filter(id__in=Subquery(events_distinct.values('pk')))
     context = {
         "rooms" : rooms,
         "events" : events,
