@@ -13,3 +13,10 @@ class Event(models.Model):
     timeStart = models.TimeField(auto_now=False, auto_now_add=False)
     timeEnd = models.TimeField(auto_now=False, auto_now_add=False)
     date = models.DateField()
+
+# class Theme(models.Model):
+#    Background_Color:
+#    Font_Color:
+#    Table_Header_Row_Color:
+#    Table_Row_Color:
+#    Table_Row_Alt_Color:

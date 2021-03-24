@@ -3,6 +3,14 @@
 {% block page_content %}
 
 <style>
+:root
+{
+    --background-color: #0065BD;
+    --font-color: #fff;
+    --table-header-color: #FECB00;
+    --table-row-color: #0065BD;
+    --table-row-alt-color: #0039A6;
+}
 
 @font-face
 {
@@ -13,8 +21,8 @@
 .table-striped
 {
     /*Set Odd-Row background*/
-    background-color: #0065BD;
-    color:#fff;
+    background-color: var(--table-row-color);
+    color: var(--font-color);
     border-color:#000;
     font-size:1.5vw;
 }
@@ -22,8 +30,8 @@
 .table-striped>tbody>tr:nth-child(odd)>td, tr.found
 {
     /*Set Even-Row background*/
-    color:#fff;
-    background-color:#0039A6;
+    color: var(--font-color);
+    background-color: var(--table-row-alt-color);
 }
 
 .table-striped>tbody>tr>td
@@ -33,14 +41,14 @@
 
 .table .display-head>tr>th
 {
-    background-color: #FECB00;
+    background-color: var(--table-header-color);
     border-color:#000;
 }
 
 .header
 {
     font-size: 6vw;
-    color:#fff;
+    color: var(--font-color);
     text-align: center;
 }
 
@@ -48,7 +56,7 @@
 {
     padding-top:2%;
     font-size: 2vw;
-    color:rgb(255, 255, 255);
+    color: var(--font-color);
     text-align: center;
 }
 
@@ -60,7 +68,7 @@
 
 .page
 {
-    background-color:#0065BD;
+    background-color:var(--background-color);
     font-family:'MSU Font', sans-serif;
 }
 </style>
