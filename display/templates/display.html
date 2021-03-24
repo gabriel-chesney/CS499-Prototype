@@ -2,6 +2,70 @@
 {% load static %}
 {% block page_content %}
 
+<style>
+
+@font-face
+{
+    font-family: 'MSU Font';
+    src: url('/static/fonts/Univers_57_Condensed.ttf');
+}
+
+.table-striped
+{
+    /*Set Odd-Row background*/
+    background-color: #0065BD;
+    color:#fff;
+    border-color:#000;
+    font-size:1.5vw;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, tr.found
+{
+    /*Set Even-Row background*/
+    color:#fff;
+    background-color:#0039A6;
+}
+
+.table-striped>tbody>tr>td
+{
+    border-color:#000;
+}
+
+.table .display-head>tr>th
+{
+    background-color: #FECB00;
+    border-color:#000;
+}
+
+.header
+{
+    font-size: 6vw;
+    color:#fff;
+    text-align: center;
+}
+
+.subheader
+{
+    padding-top:2%;
+    font-size: 2vw;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+.container-fluid
+{
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.page
+{
+    background-color:#0065BD;
+    font-family:'MSU Font', sans-serif;
+}
+</style>
+
+
 <div class="page">
     <head>
         <title>MSU SCES Information</title>
