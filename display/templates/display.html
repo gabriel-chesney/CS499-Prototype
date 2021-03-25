@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
+{% load display_theme_tags %}
 {% block page_content %}
 
 <style>
+{% get_display_theme as theme %}
+
 :root
 {
-    --background-color: #0065BD;
-    --font-color: #fff;
-    --table-header-color: #FECB00;
-    --table-row-color: #0065BD;
-    --table-row-alt-color: #0039A6;
+    --background-color: {{ theme.Background_Color }};
+    --font-color: {{theme.Font_Color }};
+    --table-header-color: {{theme.Table_Header_Row_Color}};
+    --table-row-color: {{theme.Table_Row_Color}};
+    --table-row-alt-color: {{theme.Table_Row_Alt_Color}};
 }
 
 @font-face

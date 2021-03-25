@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from display.models import *
+from display.models import Room, Event
 from datetime import date, datetime
 from django.db.models import Count, Min, Subquery, Max
 
