@@ -2,6 +2,7 @@
 {% load static %}
 {% load display_theme_tags %}
 {% block page_content %}
+{% get_display_theme as theme %}
 
 <style>
 {% get_display_theme as theme %}
@@ -80,7 +81,7 @@
 
 <div class="page">
     <head>
-        <title>MSU SCES Information</title>
+        <title>{{theme.Page_Title}}</title>
         <meta charset="utf-8">
         <meta name="viewport" content ="width=device-width, initial-scale=1">
     </head>
@@ -88,14 +89,14 @@
     <div class ="container-fluid d-flex h-100">
         <div class="col-md-6">
             <div class = "header">
-                <p>Today's Events</p>
+                <p>{{theme.Page_Header}}</p>
             </div>
         </div>
 
         <div class="col-md-6 justify-content-center">
             <div class = "subheader justify-content-center">
-                <p>Student Center and Event Services</p>
-                <p>Information Desk</p>
+                <p>{{theme.Page_Subheader_Top}}</p>
+                <p>{{theme.Page_Subheader_Bottom}}</p>
             </div>
         </div>
     </div>

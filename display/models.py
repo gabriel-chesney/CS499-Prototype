@@ -72,6 +72,10 @@ class Theme(models.Model):
 
     active = models.BooleanField(default = True, verbose_name='active')
     name = models.CharField(max_length=20)
+    Page_Title = models.CharField(max_length = 30, default = "Title")
+    Page_Header = models.CharField(max_length = 30, default = "Header")
+    Page_Subheader_Top = models.CharField(max_length = 40, default = "Subheader: Top")
+    Page_Subheader_Bottom = models.CharField(max_length = 40, default = "Subheader: Bottom")
     Background_Color = ColorField(default = '#FFFFFF')
     Font_Color = ColorField(default = '#FFFFFF')
     Table_Header_Row_Color = ColorField(default = '#FFFFFF')
