@@ -77,6 +77,7 @@ class Theme(models.Model):
     Table_Header_Row_Color = ColorField(default = '#FFFFFF')
     Table_Row_Color = ColorField(default = '#FFFFFF')
     Table_Row_Alt_Color = ColorField(default = '#FFFFFF')
+    Tabe_Border_Color = ColorField(default = '#FFFFFF')
 
     def set_active(self):
         self.active = True

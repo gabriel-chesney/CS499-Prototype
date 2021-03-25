@@ -13,6 +13,7 @@
     --table-header-color: {{theme.Table_Header_Row_Color}};
     --table-row-color: {{theme.Table_Row_Color}};
     --table-row-alt-color: {{theme.Table_Row_Alt_Color}};
+    --table-border-color: {{theme.Table_Border_Color}};
 }
 
 @font-face
@@ -26,7 +27,7 @@
     /*Set Odd-Row background*/
     background-color: var(--table-row-color);
     color: var(--font-color);
-    border-color:#000;
+    border-color:var(--table-border-color);
     font-size:1.5vw;
 }
 
@@ -39,13 +40,13 @@
 
 .table-striped>tbody>tr>td
 {
-    border-color:#000;
+    border-color:var(--table-border-color);
 }
 
 .table .display-head>tr>th
 {
     background-color: var(--table-header-color);
-    border-color:#000;
+    border-color:var(--table-border-color);
 }
 
 .header
