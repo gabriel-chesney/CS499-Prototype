@@ -76,6 +76,18 @@
     background-color:var(--background-color);
     font-family:'MSU Font', sans-serif;
 }
+
+img
+{
+    float: right;
+    display: block;
+    max-width: 2%;
+    height: 2%;
+    position: relative;
+    right: 2vw;
+    bottom: 9.5vw;
+    filter: invert();
+}
 </style>
 
 
@@ -85,44 +97,50 @@
         <meta charset="utf-8">
         <meta name="viewport" content ="width=device-width, initial-scale=1">
     </head>
-    
-    <div class ="container-fluid d-flex h-100">
-        <div class="col-md-6">
-            <div class = "header">
-                <p>{{theme.Page_Header}}</p>
+
+    <header>
+        <div class ="container-fluid d-flex h-100">
+            <div class="col-md-6">
+                <div class = "header">
+                    <p>{{theme.Page_Header}}</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 justify-content-center">
+                <div class = "subheader justify-content-center">
+                    <p>{{theme.Page_Subheader_Top}}</p>
+                    <p>{{theme.Page_Subheader_Bottom}}</p>
+                </div>
             </div>
         </div>
 
-        <div class="col-md-6 justify-content-center">
-            <div class = "subheader justify-content-center">
-                <p>{{theme.Page_Subheader_Top}}</p>
-                <p>{{theme.Page_Subheader_Bottom}}</p>
-            </div>
-        </div>
-    </div>
+        <a href = "{% url 'admin:index' %}"><img src = "{% static "images/white-gear-icon-png-4.png" %}" alt = "gear icon"></a>
+    </header>
     
-    <div class ="container-fluid">
-        <table class="table table-striped table-bordered">
-            <thead class="display-head">
-                <tr>
-                    <th>Room</th>
-                    <th>Time</th>
-                    <th>Group</th>
-                    <th>Event</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for Event in events %}
-                <tr>
-                    <td>{{Event.room}}</td>
-                    <td>{{Event.timeStart}} - {{Event.timeEnd}}</td>
-                    <td>{{Event.group}}</td>
-                    <td>{{Event.name}}</td>
-                </tr>
-                {%endfor%}
-            </tbody>
-        </table>
-    </div>
+    <body>
+        <div class ="container-fluid">
+            <table class="table table-striped table-bordered">
+                <thead class="display-head">
+                    <tr>
+                        <th>Room</th>
+                        <th>Time</th>
+                        <th>Group</th>
+                        <th>Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Event in events %}
+                    <tr>
+                        <td>{{Event.room}}</td>
+                        <td>{{Event.timeStart}} - {{Event.timeEnd}}</td>
+                        <td>{{Event.group}}</td>
+                        <td>{{Event.name}}</td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </body>
 </div>
 
 
