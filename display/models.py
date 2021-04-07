@@ -3,6 +3,8 @@ from django.db import models
 from django.db.models.signals import post_delete, post_save, pre_save
 from admin_interface.cache import del_cached_active_theme
 from django.utils.encoding import force_str
+from django.contrib.auth.models import User
+from django.conf import settings
 
 # Create your models here.
 class Room(models.Model):
@@ -17,6 +19,8 @@ class Event(models.Model):
     timeStart = models.TimeField(auto_now=False, auto_now_add=False)
     timeEnd = models.TimeField(auto_now=False, auto_now_add=False)
     date = models.DateField()
+    approved = models.BooleanField(default = False, verbose_name='approved')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.CASCADE)
 
 class Theme(models.Model):
     #Static Methods provided from django-admin-interface by fabiocaccamo
