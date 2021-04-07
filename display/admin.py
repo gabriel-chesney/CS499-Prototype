@@ -10,7 +10,8 @@ class EventAdmin(admin.ModelAdmin):
     def get_readonly_fields(self, request, obj=None):
         fields = list(super().get_readonly_fields(request))
         if not request.user.is_superuser:
-            fields.append('approved')
+            fields.append('approved', 'author')
+        fields.append('author')
         return fields
 
     def has_change_permission(self, request, obj=None):
@@ -27,7 +28,6 @@ class EventAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
     list_display = ('name', 'group', 'room', 'date', 'timeStart', 'approved')
-    exclude = ('author',)
     pass
 
 class ThemeAdmin(admin.ModelAdmin):
