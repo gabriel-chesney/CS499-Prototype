@@ -81,11 +81,11 @@ class Theme(models.Model):
     Page_Subheader_Top = models.CharField(max_length = 40, default = "Subheader: Top")
     Page_Subheader_Bottom = models.CharField(max_length = 40, default = "Subheader: Bottom")
     Background_Color = ColorField(default = '#FFFFFF')
-    Font_Color = ColorField(default = '#FFFFFF')
+    Font_Color = ColorField(default = '#000000')
     Table_Header_Row_Color = ColorField(default = '#FFFFFF')
     Table_Row_Color = ColorField(default = '#FFFFFF')
     Table_Row_Alt_Color = ColorField(default = '#FFFFFF')
-    Table_Border_Color = ColorField(default = '#FFFFFF')
+    Table_Border_Color = ColorField(default = '#000000')
 
     def set_active(self):
         self.active = True
