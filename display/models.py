@@ -5,7 +5,9 @@ from admin_interface.cache import del_cached_active_theme
 from django.utils.encoding import force_str
 from django.contrib.auth.models import User
 from django.conf import settings
+from django.dispatch import receiver
 from recurrence.fields import RecurrenceField
+import datetime
 
 # Create your models here.
 class Room(models.Model):
@@ -13,16 +15,30 @@ class Room(models.Model):
     def __str__(self):
         return self.id
 
+class Group(models.Model):
+    id = models.CharField(max_length = 40, primary_key=True)
+    def __str__(self):
+        return self.id
+        
 class Event(models.Model):
     name = models.CharField(max_length=20)
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
-    group = models.CharField(max_length=20)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
     timeStart = models.TimeField(auto_now=False, auto_now_add=False)
     timeEnd = models.TimeField(auto_now=False, auto_now_add=False)
-    date = models.DateField()
-    recDate = RecurrenceField(null = True)
+    date = models.DateField(null=True, blank = True)
+    recDate = RecurrenceField(verbose_name='date')
     approved = models.BooleanField(default = False, verbose_name='approved')
     author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.CASCADE)
+
+@receiver(post_save, sender=Event)
+def update_next_occurrence(sender, instance, **kwargs):
+    occDate = instance.recDate.after((datetime.datetime.today() - datetime.timedelta(days=1)), inc=True)
+    Event.objects.filter(pk=instance.pk).update(date=occDate)
+
+class xtendUser(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
 
 class Theme(models.Model):
     #Static Methods provided from django-admin-interface by fabiocaccamo

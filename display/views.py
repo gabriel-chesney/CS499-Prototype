@@ -7,6 +7,9 @@ from django.db.models import Count, Min, Subquery, Max
 def display(request):
     rooms = Room.objects.all().order_by("id")
     
+    for event in Event.objects.filter(approved__exact = True):
+        event.save()
+
     events = Event.objects.filter(approved__exact = True).filter(date=date.today()).order_by('timeStart').order_by('room')
 
     context = {
