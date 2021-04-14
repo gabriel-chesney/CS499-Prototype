@@ -8,6 +8,7 @@ from display.models import Room, Event, Theme, Group, xtendUser
 class xtendUserInline(admin.StackedInline):
     model = xtendUser
     can_delete = False
+    null = False
     verbose_name = 'Group'
 
 class UserAdmin(BaseUserAdmin):
@@ -41,7 +42,7 @@ class EventAdmin(admin.ModelAdmin):
         if not obj.pk:
             # Only set author during the first save.
             obj.author = request.user
-            #obj.group = request.user.xtendUser.group
+            obj.group = request.user.xtenduser.group
         super().save_model(request, obj, form, change)
 
     list_display = ('name', 'group', 'room', 'date', 'timeStart', 'approved')
