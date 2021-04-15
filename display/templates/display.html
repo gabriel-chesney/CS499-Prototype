@@ -132,7 +132,7 @@ img
                     {% for Event in events %}
                     <tr>
                         <td>{{Event.room}}</td>
-                        <td>{{Event.timeStart}} - {{Event.timeEnd}}</td>
+                        <td>{{Event.timeStart|date:'h:i a'}} - {{Event.timeEnd|date:'h:i a'}}</td>
                         <td>{{Event.group}}</td>
                         <td>{{Event.name}}</td>
                     </tr>
